@@ -1,0 +1,45 @@
+.1-px(top,@color:black){
+	position:relative;
+	&:before{
+		position: absolute;
+		content: "";
+		display: block;
+		top: 0;
+		width: 100%;
+		height: 1px;
+		background: @color;
+		// 像素比为2时
+		@media only screen and(-webkit-device-pixel-ratio:2){
+			// Y轴缩小一半
+			transform: scaleY(.5);
+		}
+		// 像素比为3时
+		@media only screen and(-webkit-device-pixel-ratio:3){
+			// Y轴缩小三分之一
+			transform: scaleY(.3333333333333);
+		}
+	}
+}
+
+.1-px(bottom,@color:black){
+	position:relative;
+	&:before{
+		position: absolute;
+		content: "";
+		display: block;
+		bottom: 0;
+		width: 100%;
+		height: 1px;
+		background: @color;
+		// 像素比为2时
+		@media only screen and(-webkit-device-pixel-ratio:2){
+			// Y轴缩小一半
+			transform: scaleY(.5);
+		}
+		// 像素比为3时
+		@media only screen and(-webkit-device-pixel-ratio:3){
+			// Y轴缩小三分之一
+			transform: scaleY(.3333333333333);
+		}
+	}
+}
